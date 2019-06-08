@@ -1,0 +1,37 @@
+Given the class :
+
+
+public class MyConcat {
+	public String concat(String a ,String b){
+		return a+b;
+	}
+}
+
+
+Complete this code to make sure that it works and uses assertJ
+
+
+import static org.assertj.core.api.Assertions.*;
+
+import org.junit.Test;
+
+public class MyTest {
+
+	@Test
+
+	public void test() {
+		MyConcat myconcat=new MyConcat();
+		assertThat(myconcat.concat("string1", "string2"))
+					
+					.startsWith("string1")
+					
+					.endsWith("string2")
+					
+					.isEqualTo("string1string2")
+					
+					.isNotNull();
+		
+	}
+
+}
+
